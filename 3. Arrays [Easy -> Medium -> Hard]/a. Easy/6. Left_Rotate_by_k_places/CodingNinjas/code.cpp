@@ -11,7 +11,7 @@ vector<int> rotateArray(vector<int>arr, int k) {
     }
     int j = 0;
     for(int i = arr.size()-k; i < arr.size(); i++){
-        arr[i] = v[j];
+        arr[i] = v[j];      //arr[i] = v[i-(n-d)]
         j++;
     }
     return arr;
