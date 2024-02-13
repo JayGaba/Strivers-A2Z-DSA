@@ -5,7 +5,7 @@ using namespace std;
 vector < int > sortedArray(vector < int > a, vector < int > b) {
     // Write your code here
     vector <int> ans;
-    unordered_set<int> s;
+    set<int> s;
     int n1 = a.size();
     int n2 = b.size();
     for( int i = 0; i < n1; i++){
@@ -16,9 +16,9 @@ vector < int > sortedArray(vector < int > a, vector < int > b) {
         s.insert(b[i]);
     }
 
-    for(auto i : s){
+    for(int i : s){
         ans.push_back(i);
     }
-    sort(ans.begin(), ans.end());
+    
     return ans;
 }
