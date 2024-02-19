@@ -1,4 +1,4 @@
-//couldnt solve myself [19/02/2024]
+//couldnt solve without assistance [19/02/2024]
 #include <bits/stdc++.h> 
 int getLongestSubarray(vector<int>& a, int k){
     // Write your code here
