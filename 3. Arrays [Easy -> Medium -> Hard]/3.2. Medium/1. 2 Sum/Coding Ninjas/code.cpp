@@ -29,4 +29,23 @@ string read(int n, vector<int> a, int target)
     return "NO";
 }
 
-//optimal approach
+//optimal approach same TC but not using map 2 ptr approach
+#include <bits/stdc++.h>
+using namespace std;
+string read(int n, vector<int> a, int target)
+{
+    int s = 0, e = n-1;
+    sort(a.begin(), a.end());
+    while(s<e){
+        if (a[s] + a[e] < target){
+            s++;
+        }
+        if (a[s] + a[e] > target){
+            e--;
+        }
+        if (a[s] + a[e] == target){
+            return "YES";
+        }
+    }
+    return "NO";
+}
