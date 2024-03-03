@@ -1,3 +1,4 @@
+//my approach - didnt work for [0]
 class Solution {
 public:
     
@@ -19,5 +20,30 @@ public:
             
         }
         return ans;
+    }
+};
+
+//optimal approach -->
+class Solution {
+public:
+    int longestConsecutive(vector<int> &num) {
+        unordered_set<int> hashSet(num.begin(), num.end());
+        int longestStreak = 0;
+
+        for(int i : num) {
+            if(!hashSet.count(i - 1)) {
+                int currentNum = i;
+                int currentStreak = 1;
+
+                while(hashSet.count(currentNum + 1)) {
+                    currentNum += 1;
+                    currentStreak += 1;
+                }
+
+                longestStreak = max(longestStreak, currentStreak);
+            }
+        }
+
+        return longestStreak;
     }
 };
