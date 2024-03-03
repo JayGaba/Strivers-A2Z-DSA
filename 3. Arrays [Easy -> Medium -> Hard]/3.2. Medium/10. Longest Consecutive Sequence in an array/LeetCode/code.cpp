@@ -1,12 +1,9 @@
 class Solution {
 public:
-    /**
-     * @param num: A list of integers
-     * @return: An integer
-     */
+    
     int longestConsecutive(vector<int> &num) {
         // write your code here
-        int x = 0, y = 0;
+        int x = 0, y = 1;
         int n = num.size();
         int count = 1;
         int ans = 0;
@@ -17,8 +14,9 @@ public:
             }else{
                 count = 1;
             }
-            x++,y++;
             ans = max(ans, count);
+            x++,y++;
+            
         }
         return ans;
     }
