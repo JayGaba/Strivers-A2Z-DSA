@@ -15,3 +15,5 @@ vector<int> majorityElement(vector<int> v) {
 	}
 	return ans;
 }
+
+//optimized approach ->
